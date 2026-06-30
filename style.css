@@ -124,10 +124,7 @@ ul { list-style: none; }
 .logo img { width: 42px; height: 42px; border-radius: 50%; object-fit: cover; background: #fff; transition: transform .4s; }
 .logo:hover img { transform: rotate(-8deg) scale(1.05); }
 .logo-text { font-weight: 700; font-size: 1.05rem; color: var(--navy); }
-.header.scrolled .logo-text, .header:not(.scrolled) .logo-text { color: inherit; }
-.logo-text em { color: var(--red); font-style: italic; }
-.header:not(.scrolled) .logo-text { color: #fff; }
-.header.scrolled .logo-text { color: var(--navy); }
+.logo-text em { color: var(--red); font-style: normal; }
 
 .nav-links { display: flex; gap: 28px; flex: 1; justify-content: center; }
 .nav-link {
