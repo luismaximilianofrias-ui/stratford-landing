@@ -647,7 +647,7 @@ ul { list-style: none; }
   .form-row { grid-template-columns: 1fr; }
   .hero-photos { gap: 10px; }
   .hero-photo { border-radius: 12px; aspect-ratio: 3/4; }
-  .hero-photo-2 img { object-position: center 30%; }
+  .hero-photo-2 img { object-position: 75% 30%; }
 }
 
 @media (max-width: 480px) {
