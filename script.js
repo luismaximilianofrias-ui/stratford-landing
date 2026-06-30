@@ -34,7 +34,7 @@ navLinks.querySelectorAll('a').forEach(link => {
 });
 
 // ===== SCROLL REVEAL (IntersectionObserver) =====
-const revealEls = document.querySelectorAll('.fade-up, .fade-in, .fade-in-left, .fade-in-right, .reveal-up');
+const revealEls = document.querySelectorAll('.fade-up, .fade-in, .fade-in-left, .fade-in-right, .reveal-up, .reveal-down');
 const revealObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
