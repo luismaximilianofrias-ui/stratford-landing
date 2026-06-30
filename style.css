@@ -329,7 +329,7 @@ ul { list-style: none; }
   transition: transform .3s;
 }
 .flag-item:hover { transform: translateY(-6px) scale(1.1); }
-.flag-emoji { font-size: 4rem; line-height: 1; }
+.flag-img { width: 100px; height: 66px; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 16px -4px rgba(0,0,0,0.25); }
 .flag-item p { font-size: .85rem; font-weight: 600; color: var(--gray); letter-spacing: .5px; }
 
 .about-heading { margin-bottom: 60px; }
