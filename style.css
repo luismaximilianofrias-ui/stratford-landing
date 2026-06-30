@@ -189,6 +189,27 @@ ul { list-style: none; }
   flex-direction: column;
   gap: 50px;
 }
+.hero-top {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 50px;
+  align-items: center;
+}
+.hero-logo-side {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero-logo-side img {
+  width: 100%;
+  max-width: 340px;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 6px solid rgba(255,255,255,0.15);
+  box-shadow: var(--shadow);
+  background: #fff;
+}
 .hero-text { color: #fff; }
 .hero-logo-row {
   display: flex;
@@ -623,6 +644,9 @@ ul { list-style: none; }
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 980px) {
+  .hero-top { grid-template-columns: 1fr; }
+  .hero-logo-side { order: -1; }
+  .hero-logo-side img { max-width: 180px; }
   .about-grid, .contact-grid { grid-template-columns: 1fr; }
   .facilities-grid { grid-template-columns: 1fr; }
   .facility-card img, .facility-card.big img { height: 240px; }
