@@ -430,6 +430,14 @@ ul { list-style: none; }
 
 /* ===== COURSES ===== */
 .courses { padding: 110px 0; }
+.modalidad-tag {
+  margin-top: 10px;
+  font-size: .88rem;
+  font-weight: 600;
+  color: var(--red);
+  letter-spacing: .5px;
+  text-transform: uppercase;
+}
 .cards-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
