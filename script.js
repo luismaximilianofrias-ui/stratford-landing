@@ -84,5 +84,14 @@ form.addEventListener('submit', (e) => {
   setTimeout(() => formSuccess.classList.remove('show'), 5000);
 });
 
+// ===== FOTO ZOOM TOGGLE =====
+document.querySelectorAll('.hero-photo').forEach(photo => {
+  photo.addEventListener('click', () => {
+    const isZoomed = photo.classList.contains('zoomed');
+    document.querySelectorAll('.hero-photo').forEach(p => p.classList.remove('zoomed'));
+    if (!isZoomed) photo.classList.add('zoomed');
+  });
+});
+
 // ===== FOOTER YEAR =====
 document.getElementById('year').textContent = new Date().getFullYear();

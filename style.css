@@ -267,7 +267,7 @@ ul { list-style: none; }
 }
 .hero-photo img { width: 100%; height: 100%; object-fit: cover; transition: transform .7s ease; }
 .hero-photo:hover img,
-.hero-photo:active img { transform: scale(1.35); }
+.hero-photo.zoomed img { transform: scale(1.35); }
 /* ===== MARQUEE ===== */
 .marquee {
   background: var(--red);
