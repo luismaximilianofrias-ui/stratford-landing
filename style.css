@@ -313,7 +313,30 @@ ul { list-style: none; }
 .center { text-align: center; margin-left: auto; margin-right: auto; }
 
 /* ===== ABOUT ===== */
-.about { padding: 110px 0; background: var(--cream); }
+.about {
+  padding: 110px 0;
+  background: var(--cream);
+  position: relative;
+  overflow: hidden;
+}
+.about::before {
+  content: '';
+  position: absolute;
+  top: -120px; right: -120px;
+  width: 480px; height: 480px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(232,17,45,0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+.about::after {
+  content: '';
+  position: absolute;
+  bottom: -80px; left: -100px;
+  width: 360px; height: 360px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(232,17,45,0.06) 0%, transparent 70%);
+  pointer-events: none;
+}
 
 /* banderas */
 .flags-row {
@@ -372,7 +395,31 @@ ul { list-style: none; }
 }
 
 /* ===== PROPUESTAS ACADEMICAS ===== */
-.academic-intro { padding: 100px 0 90px; background: #fff; }
+.academic-intro {
+  padding: 100px 0 90px;
+  background: linear-gradient(135deg, #fff 60%, #fff5f6 100%);
+  position: relative;
+  overflow: hidden;
+}
+.academic-intro::before {
+  content: '';
+  position: absolute;
+  top: 50%; left: -140px;
+  transform: translateY(-50%);
+  width: 400px; height: 400px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(232,17,45,0.07) 0%, transparent 70%);
+  pointer-events: none;
+}
+.academic-intro::after {
+  content: '';
+  position: absolute;
+  bottom: -100px; right: -80px;
+  width: 320px; height: 320px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(232,17,45,0.06) 0%, transparent 70%);
+  pointer-events: none;
+}
 .academic-question {
   margin-top: 18px;
   font-size: 1.15rem;
@@ -429,7 +476,30 @@ ul { list-style: none; }
 .academic-list li.reveal-down:nth-child(4) { transition-delay: .3s; }
 
 /* ===== COURSES ===== */
-.courses { padding: 110px 0; }
+.courses {
+  padding: 110px 0;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(160deg, #fff 40%, #fff5f6 100%);
+}
+.courses::before {
+  content: '';
+  position: absolute;
+  top: -80px; right: -80px;
+  width: 500px; height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(232,17,45,0.07) 0%, transparent 65%);
+  pointer-events: none;
+}
+.courses::after {
+  content: '';
+  position: absolute;
+  bottom: -120px; left: 10%;
+  width: 350px; height: 350px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(10,10,10,0.04) 0%, transparent 70%);
+  pointer-events: none;
+}
 .modalidad-tag {
   margin-top: 10px;
   font-size: .88rem;
@@ -472,7 +542,31 @@ ul { list-style: none; }
 }
 
 /* ===== FACILITIES ===== */
-.facilities { padding: 110px 0 80px; background: var(--navy); color: #fff; }
+.facilities {
+  padding: 110px 0 80px;
+  background: linear-gradient(145deg, #0a0a0a 0%, #1c0608 60%, #0a0a0a 100%);
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+.facilities::before {
+  content: '';
+  position: absolute;
+  top: -150px; left: -150px;
+  width: 500px; height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(232,17,45,0.12) 0%, transparent 65%);
+  pointer-events: none;
+}
+.facilities::after {
+  content: '';
+  position: absolute;
+  bottom: -100px; right: -100px;
+  width: 400px; height: 400px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(232,17,45,0.08) 0%, transparent 65%);
+  pointer-events: none;
+}
 
 /* galería */
 .gallery-wrap {
@@ -544,7 +638,30 @@ ul { list-style: none; }
 }
 
 /* ===== TESTIMONIALS ===== */
-.testimonials { padding: 110px 0 90px; background: var(--red); overflow: hidden; }
+.testimonials {
+  padding: 110px 0 90px;
+  background: linear-gradient(135deg, #c20d24 0%, #e8112d 50%, #c20d24 100%);
+  overflow: hidden;
+  position: relative;
+}
+.testimonials::before {
+  content: '';
+  position: absolute;
+  top: -100px; right: -100px;
+  width: 450px; height: 450px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 65%);
+  pointer-events: none;
+}
+.testimonials::after {
+  content: '';
+  position: absolute;
+  bottom: -80px; left: 5%;
+  width: 300px; height: 300px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(0,0,0,0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
 .testimonials .section-tag, .testimonials .section-title { color: #fff; }
 .testi-track-wrap { overflow: hidden; margin-top: 50px; }
 .testi-track {
@@ -570,7 +687,30 @@ ul { list-style: none; }
 
 /* ===== CTA ===== */
 /* ===== CONTACT ===== */
-.contact { padding: 110px 0 0; }
+.contact {
+  padding: 110px 0 0;
+  background: linear-gradient(160deg, #fff 50%, #fff5f6 100%);
+  position: relative;
+  overflow: hidden;
+}
+.contact::before {
+  content: '';
+  position: absolute;
+  top: -100px; right: -120px;
+  width: 420px; height: 420px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(232,17,45,0.07) 0%, transparent 65%);
+  pointer-events: none;
+}
+.contact::after {
+  content: '';
+  position: absolute;
+  bottom: 60px; left: -80px;
+  width: 280px; height: 280px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(232,17,45,0.05) 0%, transparent 70%);
+  pointer-events: none;
+}
 .contact-hablemos {
   text-align: center;
   font-family: var(--ff-serif);
@@ -653,7 +793,23 @@ ul { list-style: none; }
 .map-wrap { width: 100%; margin-top: 70px; filter: grayscale(.15); }
 
 /* ===== CTA FINAL ===== */
-.cta-final { padding: 80px 0; background: #fff; text-align: center; }
+.cta-final {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #fff 30%, #fff0f2 100%);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.cta-final::before {
+  content: '';
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px; height: 300px;
+  border-radius: 50%;
+  background: radial-gradient(ellipse, rgba(232,17,45,0.06) 0%, transparent 70%);
+  pointer-events: none;
+}
 .cta-box {
   display: inline-block;
   border: 3px solid var(--navy);
