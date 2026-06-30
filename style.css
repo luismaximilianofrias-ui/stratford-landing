@@ -339,13 +339,35 @@ ul { list-style: none; }
   grid-template-columns: 1fr;
   gap: 40px;
 }
-.about-list { margin: 26px 0; display: grid; gap: 14px; }
-.about-list li { display: flex; align-items: center; gap: 10px; font-weight: 500; }
-.about-list span {
-  width: 26px; height: 26px; border-radius: 50%;
-  background: var(--red); color: #fff;
+.about-text p { color: var(--gray); line-height: 1.8; }
+.about-p2 { margin-top: 18px; }
+
+.explore-more {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-top: 60px;
+  color: var(--navy);
+  font-size: .9rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: color .3s;
+}
+.explore-more:hover { color: var(--red); }
+.explore-arrow {
+  width: 40px; height: 40px;
+  border: 2px solid currentColor;
+  border-radius: 50%;
   display: flex; align-items: center; justify-content: center;
-  font-size: .75rem;
+  font-size: 1.1rem;
+  animation: bounceDown 1.6s ease-in-out infinite;
+}
+@keyframes bounceDown {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(6px); }
 }
 
 /* ===== COURSES ===== */
