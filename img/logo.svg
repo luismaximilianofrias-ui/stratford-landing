@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <circle cx="100" cy="100" r="98" fill="#ffffff" stroke="#e8112d" stroke-width="4"/>
+  <text x="100" y="95" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-style="italic" font-weight="700" font-size="34" fill="#e8112d">Stratford</text>
+  <text x="100" y="135" text-anchor="middle" font-family="Arial, sans-serif" font-weight="800" font-size="30" letter-spacing="2" fill="#e8112d">I.C.L.I</text>
+  <line x1="55" y1="108" x2="145" y2="108" stroke="#e8112d" stroke-width="2"/>
+</svg>

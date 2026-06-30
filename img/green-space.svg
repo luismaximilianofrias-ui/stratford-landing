@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 480" width="700" height="480">
+  <defs>
+    <linearGradient id="wallG2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f3eee6"/>
+    </linearGradient>
+    <linearGradient id="floorG2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e9e2d4"/>
+      <stop offset="100%" stop-color="#d2c8b3"/>
+    </linearGradient>
+    <linearGradient id="tableCloth" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ef2c3d"/>
+      <stop offset="100%" stop-color="#c41523"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="700" height="60" fill="#eee9e0"/>
+  <rect x="0" y="60" width="700" height="240" fill="url(#wallG2)"/>
+  <rect x="0" y="300" width="700" height="180" fill="url(#floorG2)"/>
+  <g stroke="#bdb29a" stroke-width="1.5" opacity="0.55">
+    <line x1="0" y1="350" x2="700" y2="350"/>
+    <line x1="0" y1="400" x2="700" y2="400"/>
+    <line x1="0" y1="450" x2="700" y2="450"/>
+    <line x1="120" y1="300" x2="60" y2="480"/>
+    <line x1="280" y1="300" x2="250" y2="480"/>
+    <line x1="440" y1="300" x2="450" y2="480"/>
+    <line x1="600" y1="300" x2="640" y2="480"/>
+  </g>
+
+  <!-- counter / reception -->
+  <rect x="40" y="120" width="190" height="110" rx="6" fill="#f3b8c2"/>
+  <rect x="40" y="120" width="190" height="14" fill="#e8112d"/>
+  <circle cx="90" cy="170" r="20" fill="#7a4a2b"/>
+  <rect x="74" y="184" width="32" height="6" rx="3" fill="#5a3520"/>
+  <text x="160" y="172" text-anchor="middle" font-family="Georgia, serif" font-style="italic" font-size="13" fill="#7a3b16">Coffee</text>
+  <text x="160" y="190" text-anchor="middle" font-family="Georgia, serif" font-style="italic" font-size="13" fill="#7a3b16">Time</text>
+
+  <!-- AC -->
+  <rect x="480" y="76" width="90" height="22" rx="4" fill="#ffffff" stroke="#d8d4c8" stroke-width="2"/>
+
+  <!-- doors background -->
+  <rect x="300" y="100" width="60" height="160" fill="#f6f1e8" stroke="#d8d2c2" stroke-width="3"/>
+  <rect x="380" y="100" width="60" height="160" fill="#f6f1e8" stroke="#d8d2c2" stroke-width="3"/>
+
+  <!-- round tables with red cloth + black chairs -->
+  <g>
+    <ellipse cx="140" cy="360" rx="55" ry="16" fill="url(#tableCloth)"/>
+    <rect x="120" y="340" width="40" height="6" fill="#9c0f1c" opacity="0.4"/>
+    <g fill="#1f1f24">
+      <rect x="70" y="372" width="14" height="34" rx="4"/>
+      <rect x="195" y="372" width="14" height="34" rx="4"/>
+      <rect x="125" y="392" width="14" height="34" rx="4"/>
+    </g>
+
+    <ellipse cx="350" cy="380" rx="60" ry="17" fill="url(#tableCloth)"/>
+    <g fill="#1f1f24">
+      <rect x="275" y="392" width="14" height="36" rx="4"/>
+      <rect x="410" y="392" width="14" height="36" rx="4"/>
+      <rect x="335" y="414" width="14" height="36" rx="4"/>
+    </g>
+
+    <ellipse cx="560" cy="350" rx="50" ry="15" fill="url(#tableCloth)"/>
+    <g fill="#1f1f24">
+      <rect x="500" y="362" width="13" height="32" rx="4"/>
+      <rect x="610" y="362" width="13" height="32" rx="4"/>
+    </g>
+  </g>
+
+  <!-- ceiling lights -->
+  <circle cx="160" cy="20" r="7" fill="#fff3c9"/>
+  <circle cx="400" cy="20" r="7" fill="#fff3c9"/>
+  <circle cx="600" cy="20" r="7" fill="#fff3c9"/>
+</svg>
