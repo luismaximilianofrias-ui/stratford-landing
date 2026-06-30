@@ -114,7 +114,10 @@ document.querySelectorAll('.hero-photo').forEach(photo => {
   function maxIdx() { return Math.max(0, total - visible()); }
 
   function goTo(n) {
-    idx = Math.max(0, Math.min(n, maxIdx()));
+    const max = maxIdx();
+    if (n < 0) n = max;
+    if (n > max) n = 0;
+    idx = n;
     const slideW = slides[0].offsetWidth + 20; // width + gap
     track.style.transform = `translateX(-${idx * slideW}px)`;
     dotsWrap.querySelectorAll('.gallery-dot').forEach((d, i) => {
