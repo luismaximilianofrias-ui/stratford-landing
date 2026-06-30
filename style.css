@@ -207,21 +207,37 @@ ul { list-style: none; }
 }
 .hero-title .line { display: block; overflow: hidden; }
 .hero-title .accent { color: var(--red); }
-.hero-sub { max-width: 480px; color: rgba(255,255,255,0.8); margin-bottom: 32px; font-size: 1.02rem; }
-.hero-actions { display: flex; gap: 16px; margin-bottom: 50px; flex-wrap: wrap; }
-.hero-stats { display: flex; gap: 40px; flex-wrap: wrap; }
-.stat .num { font-size: 2rem; font-weight: 800; color: var(--red); display: block; }
-.stat p { font-size: .82rem; color: rgba(255,255,255,0.7); }
+.hero-tagline {
+  font-family: var(--ff-serif);
+  font-style: italic;
+  font-size: 1.1rem;
+  color: #ffd9de;
+  margin-bottom: 18px;
+}
+.hero-sub { max-width: 480px; color: rgba(255,255,255,0.85); margin-bottom: 32px; font-size: 1.02rem; }
+.hero-actions { display: flex; gap: 16px; margin-bottom: 10px; flex-wrap: wrap; }
 
 .hero-img { position: relative; }
-.hero-img-frame {
-  border-radius: 24px;
-  overflow: hidden;
-  box-shadow: var(--shadow);
-  transform: perspective(1000px) rotateY(-6deg) rotateX(2deg);
-  transition: transform .5s;
+.hero-photos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
 }
-.hero-img-frame:hover { transform: perspective(1000px) rotateY(0) rotateX(0); }
+.hero-photo-placeholder {
+  aspect-ratio: 3/4;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.06);
+  border: 2px dashed rgba(255,255,255,0.35);
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 10px;
+  color: rgba(255,255,255,0.7);
+  box-shadow: var(--shadow);
+  transition: transform .4s, border-color .4s;
+}
+.hero-photo-placeholder:nth-child(2) { margin-top: 30px; }
+.hero-photo-placeholder:hover { transform: translateY(-6px); border-color: rgba(255,255,255,0.6); }
+.hero-photo-placeholder span { font-size: 2rem; }
+.hero-photo-placeholder p { font-size: .82rem; font-weight: 500; }
 .hero-badge {
   position: absolute;
   bottom: -24px; left: -24px;
@@ -372,6 +388,22 @@ ul { list-style: none; }
 .facility-card.big img { height: 100%; }
 .facility-card.big { grid-row: span 1; }
 .facility-card:hover img { transform: scale(1.08); }
+.facility-card.facility-placeholder {
+  height: 280px;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 10px;
+  background: rgba(255,255,255,0.04);
+  border: 2px dashed rgba(255,255,255,0.3);
+  color: rgba(255,255,255,0.65);
+}
+.facility-card.facility-placeholder span { font-size: 2rem; }
+.facility-card.facility-placeholder .ph-label { font-size: .85rem; font-weight: 500; }
+.facility-card.facility-placeholder .facility-info {
+  position: static;
+  background: none;
+  padding: 18px 24px 0;
+  text-align: center;
+}
 .facility-info {
   position: absolute; left: 0; right: 0; bottom: 0;
   padding: 24px;
