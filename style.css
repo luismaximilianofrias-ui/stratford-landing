@@ -438,27 +438,29 @@ ul { list-style: none; }
   background: #fff;
   border: 1px solid #eee;
   border-radius: var(--radius);
-  padding: 36px 28px;
-  transition: transform .4s, box-shadow .4s, border-color .4s;
+  aspect-ratio: 1 / 1;
+  padding: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: transform .4s, box-shadow .4s, border-color .4s, background .4s;
   position: relative;
 }
 .course-card:hover {
   transform: translateY(-10px);
   box-shadow: var(--shadow);
   border-color: transparent;
+  background: var(--red);
 }
-.course-icon {
-  font-size: 2.2rem;
-  width: 64px; height: 64px;
-  border-radius: 16px;
-  background: linear-gradient(135deg, #fff0f1, #ffe0e3);
-  display: flex; align-items: center; justify-content: center;
-  margin-bottom: 20px;
-  transition: transform .4s;
+.course-card:hover h3 { color: #fff; }
+.course-card h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--navy);
+  line-height: 1.4;
+  transition: color .4s;
 }
-.course-card:hover .course-icon { transform: rotate(-8deg) scale(1.08); }
-.course-card h3 { font-size: 1.2rem; margin-bottom: 8px; }
-.course-card p { color: var(--gray); font-size: .92rem; }
 
 /* ===== FACILITIES ===== */
 .facilities { padding: 110px 0 80px; background: var(--navy); color: #fff; }
