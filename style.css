@@ -469,7 +469,8 @@ ul { list-style: none; }
 }
 
 @media (max-width: 760px) {
-  .gallery-slide { flex: 0 0 calc(100% - 80px); }
+  .gallery-track { padding: 0; gap: 0; }
+  .gallery-slide { flex: 0 0 100%; }
   .gallery-slide img { height: 240px; }
 }
 
