@@ -15,7 +15,7 @@
   --ff-serif: 'Playfair Display', serif;
 }
 
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; overflow-x: hidden; }
 
 body {
   font-family: var(--ff);
@@ -23,6 +23,7 @@ body {
   background: #fff;
   overflow-x: hidden;
   line-height: 1.6;
+  touch-action: pan-y;
 }
 
 img { max-width: 100%; display: block; }
@@ -470,6 +471,7 @@ ul { list-style: none; }
   position: relative;
   margin-top: 50px;
   overflow: hidden;
+  touch-action: pan-y;
 }
 .gallery-track {
   display: flex;
