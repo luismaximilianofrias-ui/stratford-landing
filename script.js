@@ -100,6 +100,15 @@ document.querySelectorAll('.hero-photo').forEach(photo => {
   }
 });
 
+// ===== TESTIMONIALS: pause marquee on touch =====
+if (isTouchDevice) {
+  const testiTrack = document.getElementById('testiTrack');
+  if (testiTrack) {
+    testiTrack.addEventListener('touchstart', () => { testiTrack.style.animationPlayState = 'paused'; }, { passive: true });
+    testiTrack.addEventListener('touchend', () => { testiTrack.style.animationPlayState = 'running'; });
+  }
+}
+
 // ===== COURSE CARDS COLOR ON SCROLL (mobile) =====
 if (isTouchDevice) {
   const courseCards = document.querySelectorAll('.course-card');
