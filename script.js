@@ -125,13 +125,18 @@ document.querySelectorAll('.hero-photo').forEach(photo => {
     });
   }
 
-  // build dots
-  for (let i = 0; i < total; i++) {
-    const dot = document.createElement('button');
-    dot.className = 'gallery-dot' + (i === 0 ? ' active' : '');
-    dot.addEventListener('click', () => goTo(i));
-    dotsWrap.appendChild(dot);
+  function buildDots() {
+    dotsWrap.innerHTML = '';
+    const count = maxIdx() + 1;
+    for (let i = 0; i < count; i++) {
+      const dot = document.createElement('button');
+      dot.className = 'gallery-dot' + (i === idx ? ' active' : '');
+      dot.addEventListener('click', () => goTo(i));
+      dotsWrap.appendChild(dot);
+    }
   }
+
+  buildDots();
 
   document.getElementById('galleryPrev').addEventListener('click', () => goTo(idx - 1));
   document.getElementById('galleryNext').addEventListener('click', () => goTo(idx + 1));
@@ -144,7 +149,7 @@ document.querySelectorAll('.hero-photo').forEach(photo => {
     if (Math.abs(diff) > 40) goTo(idx + (diff > 0 ? 1 : -1));
   });
 
-  window.addEventListener('resize', () => goTo(idx));
+  window.addEventListener('resize', () => { buildDots(); goTo(idx); });
 })();
 
 // ===== FOOTER YEAR =====
