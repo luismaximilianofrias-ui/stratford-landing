@@ -100,5 +100,49 @@ document.querySelectorAll('.hero-photo').forEach(photo => {
   }
 });
 
+// ===== GALLERY =====
+(function () {
+  const track = document.getElementById('galleryTrack');
+  const dotsWrap = document.getElementById('galleryDots');
+  if (!track) return;
+
+  const slides = track.querySelectorAll('.gallery-slide');
+  const total = slides.length;
+  const visible = () => window.innerWidth <= 760 ? 1 : 3;
+  let idx = 0;
+
+  function maxIdx() { return Math.max(0, total - visible()); }
+
+  function goTo(n) {
+    idx = Math.max(0, Math.min(n, maxIdx()));
+    const slideW = slides[0].offsetWidth + 20; // width + gap
+    track.style.transform = `translateX(-${idx * slideW}px)`;
+    dotsWrap.querySelectorAll('.gallery-dot').forEach((d, i) => {
+      d.classList.toggle('active', i === idx);
+    });
+  }
+
+  // build dots
+  for (let i = 0; i < total; i++) {
+    const dot = document.createElement('button');
+    dot.className = 'gallery-dot' + (i === 0 ? ' active' : '');
+    dot.addEventListener('click', () => goTo(i));
+    dotsWrap.appendChild(dot);
+  }
+
+  document.getElementById('galleryPrev').addEventListener('click', () => goTo(idx - 1));
+  document.getElementById('galleryNext').addEventListener('click', () => goTo(idx + 1));
+
+  // touch swipe
+  let touchStartX = 0;
+  track.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
+  track.addEventListener('touchend', e => {
+    const diff = touchStartX - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 40) goTo(idx + (diff > 0 ? 1 : -1));
+  });
+
+  window.addEventListener('resize', () => goTo(idx));
+})();
+
 // ===== FOOTER YEAR =====
 document.getElementById('year').textContent = new Date().getFullYear();
