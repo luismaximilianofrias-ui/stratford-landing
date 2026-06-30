@@ -118,8 +118,7 @@ document.querySelectorAll('.hero-photo').forEach(photo => {
     if (n < 0) n = max;
     if (n > max) n = 0;
     idx = n;
-    const gap = window.innerWidth <= 760 ? 0 : 20;
-    const slideW = slides[0].offsetWidth + gap;
+    const slideW = slides[0].offsetWidth + 20; // width + gap
     track.style.transform = `translateX(-${idx * slideW}px)`;
     dotsWrap.querySelectorAll('.gallery-dot').forEach((d, i) => {
       d.classList.toggle('active', i === idx);
