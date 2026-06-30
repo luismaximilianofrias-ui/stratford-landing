@@ -74,14 +74,24 @@ const statsObserver = new IntersectionObserver((entries) => {
 }, { threshold: 0.4 });
 if (statsSection) statsObserver.observe(statsSection);
 
-// ===== CONTACT FORM (demo submit) =====
+// ===== CONTACT FORM → WhatsApp =====
 const form = document.getElementById('contactForm');
 const formSuccess = document.getElementById('formSuccess');
 form.addEventListener('submit', (e) => {
   e.preventDefault();
+  const nombre   = document.getElementById('fname').value.trim();
+  const apellido = document.getElementById('flastname').value.trim();
+  const telefono = document.getElementById('fphone').value.trim();
+  const curso    = document.getElementById('fcourse').value;
+  const mensaje  = document.getElementById('fmessage').value.trim();
+  const texto = `Hola! Mi nombre es ${nombre} ${apellido}.\nTeléfono: ${telefono}\nMe interesa: ${curso}${mensaje ? '\n\n' + mensaje : ''}`;
+  const url = `https://wa.me/5493865000000?text=${encodeURIComponent(texto)}`;
   formSuccess.classList.add('show');
-  form.reset();
-  setTimeout(() => formSuccess.classList.remove('show'), 5000);
+  setTimeout(() => {
+    formSuccess.classList.remove('show');
+    form.reset();
+    window.open(url, '_blank');
+  }, 800);
 });
 
 // ===== FOTO ZOOM TOGGLE =====

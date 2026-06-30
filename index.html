@@ -258,42 +258,36 @@
 
 <!-- CONTACTO -->
 <section class="contact" id="contacto">
-  <div class="container contact-grid">
-    <div class="contact-info fade-in-left">
-      <p class="section-tag">Contacto</p>
-      <h2 class="section-title">Hablemos</h2>
-      <p class="section-sub" style="text-align:left">Escribinos y te respondemos a la brevedad. También podés visitarnos en nuestra sede.</p>
-      <ul class="contact-list">
-        <li><span class="ico">📍</span><div><strong>Dirección</strong><p>San Martín 243, Monteros, Tucumán</p></div></li>
-        <li><span class="ico">💻</span><div><strong>Modalidad</strong><p>Presencial y online</p></div></li>
-        <li><span class="ico">📷</span><div><strong>Instagram</strong><p><a href="https://instagram.com/stratford_icli" target="_blank" rel="noopener">@stratford_icli</a></p></div></li>
-        <li><span class="ico">📘</span><div><strong>Facebook</strong><p>Stratford I. C. L. I.</p></div></li>
-      </ul>
-      <div class="social-row">
-        <a href="https://instagram.com/stratford_icli" target="_blank" rel="noopener" aria-label="Instagram" class="social-btn">IG</a>
-        <a href="#" aria-label="Facebook" class="social-btn">FB</a>
-        <a href="#" aria-label="WhatsApp" class="social-btn">WA</a>
-      </div>
+  <div class="container">
+    <p class="section-tag center fade-up">Contacto</p>
+    <h2 class="section-title center fade-up">¿Listo para empezar?</h2>
+    <h3 class="contact-hablemos fade-up">Hablemos.</h3>
+    <p class="section-sub center fade-up">¡Estamos para ayudarte! Escribinos y te respondemos a la brevedad.</p>
+
+    <div class="contact-social-row fade-up">
+      <a href="https://wa.me/5493865000000" target="_blank" rel="noopener" class="contact-social-btn wa">WhatsApp</a>
+      <a href="https://instagram.com/stratford_icli" target="_blank" rel="noopener" class="contact-social-btn ig">Instagram</a>
+      <a href="https://facebook.com/stratfordicli" target="_blank" rel="noopener" class="contact-social-btn fb">Facebook</a>
     </div>
-    <form class="contact-form fade-in-right" id="contactForm">
-      <h3>Pedí información sin compromiso</h3>
+
+    <form class="contact-form fade-up" id="contactForm">
       <div class="form-row">
-        <input type="text" placeholder="Nombre" required>
-        <input type="text" placeholder="Apellido" required>
+        <input type="text" id="fname" placeholder="Nombre" required>
+        <input type="text" id="flastname" placeholder="Apellido" required>
       </div>
-      <input type="email" placeholder="Email" required>
-      <input type="tel" placeholder="Teléfono">
-      <select required>
+      <input type="tel" id="fphone" placeholder="Teléfono" required>
+      <select id="fcourse" required>
         <option value="" disabled selected>¿Qué te interesa?</option>
-        <option>Kids</option>
-        <option>Teens</option>
-        <option>Adultos</option>
+        <option>Cursos para niños y adolescentes</option>
+        <option>Cursos intensivos para adultos</option>
+        <option>Preparación para exámenes internacionales</option>
+        <option>Inglés para viajeros</option>
+        <option>Clases de conversación</option>
         <option>Clases online</option>
-        <option>Exámenes internacionales</option>
       </select>
-      <textarea rows="4" placeholder="Contanos un poco más..."></textarea>
-      <button type="submit" class="btn btn-primary full">Enviar mensaje</button>
-      <p class="form-success" id="formSuccess">¡Gracias! Te contactaremos a la brevedad. 🎉</p>
+      <textarea id="fmessage" rows="4" placeholder="Contanos un poco más..."></textarea>
+      <button type="submit" class="btn btn-primary full">Enviar mensaje por WhatsApp</button>
+      <p class="form-success" id="formSuccess">¡Gracias! Te redirigimos a WhatsApp. 🎉</p>
     </form>
   </div>
 
@@ -303,6 +297,16 @@
       src="https://www.google.com/maps?q=San+Martin+243,+Monteros,+Tucuman&output=embed"
       width="100%" height="320" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
     </iframe>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="cta-final">
+  <div class="container">
+    <div class="cta-box fade-up">
+      <p>¿Listo para hablar inglés con confianza?<br><strong>¡Sumate a nuestra gran familia STRATFORD!</strong></p>
+    </div>
+    <a href="#contacto" class="cta-link fade-up">Quiero información</a>
   </div>
 </section>
 
@@ -327,7 +331,7 @@
     </div>
   </div>
   <div class="footer-bottom">
-    <p>© <span id="year"></span> Stratford I.C.L.I. Todos los derechos reservados.</p>
+    <p>© <span id="year"></span> Stratford I.C.L.I. Todos los derechos reservados. — Hecho por <strong>Nexo Digital</strong> en 2026.</p>
   </div>
 </footer>
 

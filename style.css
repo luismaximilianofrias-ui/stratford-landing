@@ -561,50 +561,45 @@ ul { list-style: none; }
 }
 
 /* ===== CTA ===== */
-.cta { padding: 90px 0; background: linear-gradient(120deg, var(--red), var(--red-dark)); color: #fff; }
-.cta-box { text-align: center; }
-.cta-box h2 { font-family: var(--ff-serif); font-style: italic; font-size: clamp(1.8rem, 3.6vw, 2.6rem); margin-bottom: 14px; }
-.cta-box p { margin-bottom: 30px; opacity: .9; }
-
 /* ===== CONTACT ===== */
 .contact { padding: 110px 0 0; }
-.contact-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
-  align-items: start;
-  padding-bottom: 90px;
+.contact-hablemos {
+  text-align: center;
+  font-family: var(--ff-serif);
+  font-style: italic;
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: var(--navy);
+  margin: 6px 0 16px;
 }
-.contact-list { margin: 24px 0; display: grid; gap: 20px; }
-.contact-list li { display: flex; gap: 14px; align-items: flex-start; }
-.contact-list .ico {
-  width: 42px; height: 42px; border-radius: 12px;
-  background: var(--cream);
-  border: 1px solid #111;
-  display: flex; align-items: center; justify-content: center;
-  font-size: 1.1rem; flex-shrink: 0;
+.contact-social-row {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin: 32px 0 40px;
+  flex-wrap: wrap;
 }
-.contact-list strong { display: block; margin-bottom: 2px; }
-.contact-list p, .contact-list a { color: var(--gray); font-size: .92rem; }
-.contact-list a:hover { color: var(--red); }
-.social-row { display: flex; gap: 12px; margin-top: 10px; }
-.social-btn {
-  width: 44px; height: 44px; border-radius: 50%;
-  background: var(--navy); color: #fff;
-  display: flex; align-items: center; justify-content: center;
-  font-size: .8rem; font-weight: 700;
-  transition: transform .3s, background .3s;
+.contact-social-btn {
+  padding: 14px 32px;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: .95rem;
+  transition: transform .3s, opacity .3s;
+  color: #fff;
 }
-.social-btn:hover { background: var(--red); transform: translateY(-4px); }
+.contact-social-btn:hover { transform: translateY(-4px); opacity: .88; }
+.contact-social-btn.wa { background: #25d366; }
+.contact-social-btn.ig { background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
+.contact-social-btn.fb { background: #1877f2; }
 
 .contact-form {
-  background: var(--cream);
+  max-width: 640px;
+  margin: 0 auto;
+  background: #f9f9f9;
   border-radius: var(--radius);
-  padding: 36px;
+  padding: 40px;
   display: grid; gap: 16px;
   box-shadow: var(--shadow);
 }
-.contact-form h3 { margin-bottom: 6px; }
 .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
 .contact-form input, .contact-form select, .contact-form textarea {
   width: 100%;
@@ -623,14 +618,40 @@ ul { list-style: none; }
 }
 .form-success {
   display: none;
-  color: var(--green);
+  color: var(--red);
   font-weight: 600;
   text-align: center;
 }
 .form-success.show { display: block; animation: fadeUpSmall .5s ease; }
 @keyframes fadeUpSmall { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
 
-.map-wrap { width: 100%; filter: grayscale(.15); }
+.map-wrap { width: 100%; margin-top: 70px; filter: grayscale(.15); }
+
+/* ===== CTA FINAL ===== */
+.cta-final { padding: 80px 0; background: #fff; text-align: center; }
+.cta-box {
+  display: inline-block;
+  border: 3px solid var(--navy);
+  border-radius: 24px;
+  padding: 36px 48px;
+  margin-bottom: 28px;
+}
+.cta-box p {
+  font-size: clamp(1.1rem, 2.5vw, 1.45rem);
+  font-weight: 600;
+  color: var(--navy);
+  line-height: 1.5;
+}
+.cta-box strong { color: var(--red); }
+.cta-link {
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--navy);
+  text-decoration: underline;
+  transition: color .3s;
+}
+.cta-link:hover { color: var(--red); }
 
 /* ===== FOOTER ===== */
 .footer { background: var(--navy); color: #fff; padding: 70px 0 0; }
@@ -711,7 +732,8 @@ ul { list-style: none; }
   .hero-top { grid-template-columns: 1fr; }
   .hero-logo-side { order: -1; }
   .hero-logo-side img { max-width: 180px; }
-  .about-grid, .contact-grid { grid-template-columns: 1fr; }
+  .about-grid { grid-template-columns: 1fr; }
+  .form-row { grid-template-columns: 1fr; }
   .facilities-grid { grid-template-columns: 1fr; }
   .facility-card img, .facility-card.big img { height: 240px; }
   .cards-grid { grid-template-columns: repeat(2, 1fr); }
