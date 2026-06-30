@@ -85,12 +85,19 @@ form.addEventListener('submit', (e) => {
 });
 
 // ===== FOTO ZOOM TOGGLE =====
+const isTouchDevice = window.matchMedia('(hover: none)').matches;
 document.querySelectorAll('.hero-photo').forEach(photo => {
-  photo.addEventListener('click', () => {
-    const isZoomed = photo.classList.contains('zoomed');
-    document.querySelectorAll('.hero-photo').forEach(p => p.classList.remove('zoomed'));
-    if (!isZoomed) photo.classList.add('zoomed');
-  });
+  if (isTouchDevice) {
+    photo.addEventListener('touchend', (e) => {
+      e.preventDefault();
+      const isZoomed = photo.classList.contains('zoomed');
+      document.querySelectorAll('.hero-photo').forEach(p => p.classList.remove('zoomed'));
+      if (!isZoomed) photo.classList.add('zoomed');
+    });
+  } else {
+    photo.addEventListener('mouseenter', () => photo.classList.add('zoomed'));
+    photo.addEventListener('mouseleave', () => photo.classList.remove('zoomed'));
+  }
 });
 
 // ===== FOOTER YEAR =====
