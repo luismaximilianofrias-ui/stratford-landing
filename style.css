@@ -438,8 +438,8 @@ ul { list-style: none; }
   background: #fff;
   border: 1px solid #eee;
   border-radius: var(--radius);
-  aspect-ratio: 1 / 1;
-  padding: 28px;
+  aspect-ratio: 1.6 / 1;
+  padding: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -455,7 +455,7 @@ ul { list-style: none; }
 }
 .course-card:hover h3 { color: #fff; }
 .course-card h3 {
-  font-size: 1.15rem;
+  font-size: 1rem;
   font-weight: 700;
   color: var(--navy);
   line-height: 1.4;
