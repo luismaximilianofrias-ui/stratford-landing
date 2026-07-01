@@ -427,11 +427,11 @@ ul { list-style: none; }
   z-index: 0;
 }
 .academic-side-shape--left {
-  background: linear-gradient(to bottom, var(--red) 0%, rgba(232,17,45,0.1) 100%);
+  background: linear-gradient(to bottom, rgba(232,17,45,0.35) 0%, rgba(232,17,45,0.04) 100%);
   clip-path: polygon(0 0, 38% 0, 6% 100%, 0 100%);
 }
 .academic-side-shape--right {
-  background: linear-gradient(to top, var(--red) 0%, rgba(232,17,45,0.1) 100%);
+  background: linear-gradient(to top, rgba(232,17,45,0.35) 0%, rgba(232,17,45,0.04) 100%);
   clip-path: polygon(94% 0, 100% 0, 100% 100%, 62% 100%);
 }
 .academic-intro > .container { position: relative; z-index: 1; }
