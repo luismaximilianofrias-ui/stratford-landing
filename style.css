@@ -540,31 +540,57 @@ ul { list-style: none; }
 }
 .course-card {
   background: #fff;
-  border: 1px solid #eee;
   border-radius: var(--radius);
   aspect-ratio: 1.6 / 1;
-  padding: 20px;
+  padding: 24px 28px;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  transition: transform .4s, box-shadow .4s, border-color .4s, background .4s;
   position: relative;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+  overflow: hidden;
+  transition: transform .4s, box-shadow .4s;
+}
+.course-card::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 4px;
+  background: var(--red);
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: transform .4s cubic-bezier(.4,0,.2,1);
+  border-radius: 0 2px 2px 0;
+}
+.course-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(232,17,45,0.06) 0%, transparent 60%);
+  opacity: 0;
+  transition: opacity .4s;
 }
 .course-card:hover, .course-card.active {
-  transform: translateY(-10px);
-  box-shadow: var(--shadow);
-  border-color: transparent;
-  background: var(--red);
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.12);
 }
-.course-card:hover h3, .course-card.active h3 { color: #fff; }
+.course-card:hover::before, .course-card.active::before {
+  transform: scaleY(1);
+}
+.course-card:hover::after, .course-card.active::after {
+  opacity: 1;
+}
 .course-card h3 {
   font-size: 1rem;
   font-weight: 700;
   color: var(--navy);
   line-height: 1.4;
+  position: relative;
+  z-index: 1;
   transition: color .4s;
 }
+.course-card:hover h3, .course-card.active h3 { color: var(--red); }
 
 /* ===== FACILITIES ===== */
 .facilities {
