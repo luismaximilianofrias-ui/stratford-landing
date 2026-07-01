@@ -164,8 +164,7 @@ ul { list-style: none; }
   min-height: 100vh;
   display: flex; align-items: center;
   background:
-    radial-gradient(circle at 22% 30%, rgba(180,30,45,0.75) 0%, rgba(120,20,32,0.4) 32%, transparent 60%),
-    linear-gradient(160deg, rgba(58,12,18,0.92) 0%, rgba(92,16,25,0.85) 55%, rgba(42,10,14,0.94) 100%),
+    linear-gradient(90deg, rgba(30,6,10,0.82) 0%, rgba(40,10,14,0.55) 45%, rgba(40,10,14,0.25) 100%),
     url('img/frente-de-stratford.jpeg');
   background-size: cover;
   background-position: center;
@@ -195,10 +194,7 @@ ul { list-style: none; }
   gap: 50px;
 }
 .hero-top {
-  display: grid;
-  grid-template-columns: 1.2fr 1fr;
-  gap: 50px;
-  align-items: center;
+  display: block;
 }
 .hero-logo-side {
   display: flex;
@@ -356,9 +352,9 @@ ul { list-style: none; }
 /* banderas */
 .hero-flags {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 14px;
-  margin-top: 18px;
+  margin-top: 26px;
 }
 .flag-img {
   width: 42px; height: 28px;
