@@ -665,14 +665,14 @@ ul { list-style: none; }
 }
 .gallery-slide {
   flex: 0 0 calc(33.333% - 14px);
+  aspect-ratio: 1080 / 1345;
   border-radius: var(--radius);
   overflow: hidden;
   box-shadow: var(--shadow);
-  background: #141414;
 }
 .gallery-slide img {
-  width: 100%; height: 280px;
-  object-fit: contain;
+  width: 100%; height: 100%;
+  object-fit: cover;
   transition: transform .5s;
   display: block;
 }
@@ -717,7 +717,6 @@ ul { list-style: none; }
 @media (max-width: 760px) {
   .gallery-track { padding: 0 40px; gap: 20px; }
   .gallery-slide { flex: 0 0 100%; }
-  .gallery-slide img { height: 240px; }
 }
 
 /* ===== TESTIMONIALS ===== */
