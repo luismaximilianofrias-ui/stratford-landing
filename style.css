@@ -293,14 +293,14 @@ ul { list-style: none; }
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 2px;
-  font-size: .8rem;
+  font-size: 1rem;
   margin-bottom: 12px;
   text-align: center;
 }
 .section-tag.light { color: var(--red); }
 .section-title {
   font-family: var(--ff-serif);
-  font-size: clamp(2.4rem, 4.5vw, 3.6rem);
+  font-size: clamp(2rem, 4vw, 3rem);
   margin-bottom: 16px;
   color: var(--navy);
   text-align: center;
