@@ -166,8 +166,8 @@ ul { list-style: none; }
   background-color: #2a0a0e;
   background-image:
     linear-gradient(90deg, rgba(30,6,10,0.95) 0%, rgba(40,10,14,0.65) 34%, rgba(40,10,14,0.1) 58%, rgba(40,10,14,0) 100%),
-    url('img/frente-de-stratford-con-alumnos.jpeg');
-  background-size: cover, 100% auto;
+    url('img/hero-egresados.png');
+  background-size: cover, cover;
   background-position: center, center;
   background-repeat: no-repeat, no-repeat;
   overflow: hidden;
