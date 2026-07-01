@@ -1030,8 +1030,10 @@ ul { list-style: none; }
       rgba(232,17,45,0.95) 100%);
   }
   .cards-grid { grid-template-columns: 1fr; max-width: 400px; }
-  .academic-zigzag { gap: 32px; }
-  .zz-item { width: 100%; }
+  .academic-zigzag { gap: 26px; }
+  .zz-item { width: 72%; gap: 8px; }
+  .zz-text { font-size: .92rem; }
+  .zz-img { aspect-ratio: 16 / 9; border-radius: 12px; }
   .form-row { grid-template-columns: 1fr; }
   .hero-photos { gap: 10px; }
   .hero-photo { border-radius: 12px; aspect-ratio: 3/4; }
