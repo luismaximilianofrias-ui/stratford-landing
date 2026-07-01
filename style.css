@@ -167,8 +167,8 @@ ul { list-style: none; }
   background-image:
     linear-gradient(90deg, rgba(30,6,10,0.95) 0%, rgba(40,10,14,0.65) 34%, rgba(40,10,14,0.1) 58%, rgba(40,10,14,0) 100%),
     url('img/frente-de-stratford-con-alumnos.jpeg');
-  background-size: cover, contain;
-  background-position: center, right center;
+  background-size: cover, 100% auto;
+  background-position: center, center;
   background-repeat: no-repeat, no-repeat;
   overflow: hidden;
   padding-top: 110px;
