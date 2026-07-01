@@ -292,6 +292,7 @@ ul { list-style: none; }
 .marquee-track span {
   font-weight: 700; font-size: .95rem; letter-spacing: 1px;
   padding-right: 60px;
+  text-transform: uppercase;
 }
 @keyframes marqueeScroll {
   from { transform: translateX(0); }
@@ -505,6 +506,7 @@ ul { list-style: none; }
 .academic-list li.reveal-down:nth-child(2) { transition-delay: .1s; }
 .academic-list li.reveal-down:nth-child(3) { transition-delay: .2s; }
 .academic-list li.reveal-down:nth-child(4) { transition-delay: .3s; }
+.academic-list li.reveal-down:nth-child(5) { transition-delay: .4s; }
 
 /* ===== COURSES ===== */
 .courses {
