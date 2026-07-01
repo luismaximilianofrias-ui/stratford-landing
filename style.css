@@ -290,7 +290,7 @@ ul { list-style: none; }
 }
 .marquee-track span {
   font-weight: 700; font-size: .95rem; letter-spacing: 1px;
-  padding-right: 40px;
+  padding-right: 60px;
 }
 @keyframes marqueeScroll {
   from { transform: translateX(0); }
