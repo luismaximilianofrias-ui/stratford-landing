@@ -693,28 +693,37 @@ ul { list-style: none; }
 /* ===== TESTIMONIALS ===== */
 .testimonials {
   padding: 110px 0 90px;
-  background: linear-gradient(135deg, #c20d24 0%, #e8112d 50%, #c20d24 100%);
+  background: var(--red);
   overflow: hidden;
   position: relative;
 }
-.testimonials::before {
-  content: '';
+/* fondo con las 2 imagenes (mitad y mitad) */
+.testi-bg {
   position: absolute;
-  top: -100px; right: -100px;
-  width: 450px; height: 450px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 65%);
+  inset: 0;
+  display: flex;
+  z-index: 0;
+}
+.testi-bg-half {
+  flex: 1;
+  background-size: cover;
+  background-position: center;
+}
+/* degradado rojo suave que une las 2 imagenes por el medio */
+.testi-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(90deg,
+    rgba(232,17,45,0.15) 0%,
+    rgba(232,17,45,0.80) 28%,
+    rgba(232,17,45,0.92) 50%,
+    rgba(232,17,45,0.80) 72%,
+    rgba(232,17,45,0.15) 100%);
   pointer-events: none;
 }
-.testimonials::after {
-  content: '';
-  position: absolute;
-  bottom: -80px; left: 5%;
-  width: 300px; height: 300px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(0,0,0,0.08) 0%, transparent 70%);
-  pointer-events: none;
-}
+.testimonials .container,
+.testimonials .testi-track-wrap { position: relative; z-index: 2; }
 .testimonials .section-tag, .testimonials .section-title { color: #fff; }
 .testi-track-wrap { overflow: hidden; margin-top: 50px; }
 .testi-track {
@@ -994,6 +1003,23 @@ ul { list-style: none; }
   .burger.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
   .footer-grid { grid-template-columns: 1fr; }
   .testi-card { width: 260px; padding: 24px 20px; }
+  /* en móvil: una sola imagen a la vez, rotando */
+  .testi-bg { display: block; }
+  .testi-bg-half {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 1s ease;
+  }
+  .testi-bg-half.active { opacity: 1; }
+  .testi-overlay {
+    background: linear-gradient(180deg,
+      rgba(232,17,45,0.5) 0%,
+      rgba(232,17,45,0.2) 32%,
+      rgba(232,17,45,0.85) 66%,
+      rgba(232,17,45,0.95) 100%);
+  }
   .cards-grid { grid-template-columns: 1fr; max-width: 400px; }
   .form-row { grid-template-columns: 1fr; }
   .hero-photos { gap: 10px; }

@@ -121,6 +121,19 @@ document.querySelectorAll('.hero-photo').forEach(photo => {
   }
 });
 
+// ===== TESTIMONIALS: rotar imagen de fondo en móvil =====
+if (isTouchDevice) {
+  const bgHalves = document.querySelectorAll('#testiBg .testi-bg-half');
+  if (bgHalves.length > 1) {
+    let bgIdx = 0;
+    setInterval(() => {
+      bgHalves[bgIdx].classList.remove('active');
+      bgIdx = (bgIdx + 1) % bgHalves.length;
+      bgHalves[bgIdx].classList.add('active');
+    }, 3000);
+  }
+}
+
 // ===== TESTIMONIALS: pause marquee on touch =====
 if (isTouchDevice) {
   const testiTrack = document.getElementById('testiTrack');
