@@ -163,11 +163,13 @@ ul { list-style: none; }
   position: relative;
   min-height: 100vh;
   display: flex; align-items: center;
-  background:
-    linear-gradient(90deg, rgba(30,6,10,0.82) 0%, rgba(40,10,14,0.55) 45%, rgba(40,10,14,0.25) 100%),
+  background-color: #2a0a0e;
+  background-image:
+    linear-gradient(90deg, rgba(30,6,10,0.95) 0%, rgba(40,10,14,0.7) 38%, rgba(40,10,14,0.15) 62%, rgba(40,10,14,0) 100%),
     url('img/frente-de-stratford.jpeg');
-  background-size: cover;
-  background-position: center;
+  background-size: cover, auto 100%;
+  background-position: center, right center;
+  background-repeat: no-repeat, no-repeat;
   overflow: hidden;
   padding-top: 110px;
 }
@@ -243,11 +245,17 @@ ul { list-style: none; }
 }
 .hero-title .line { display: block; overflow: hidden; }
 .hero-title .accent { color: var(--red); }
+.hero-tagline-row {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: wrap;
+  margin-bottom: 18px;
+}
 .hero-tagline {
   font-family: var(--ff-serif);
-  font-size: 1.1rem;
+  font-size: 1.5rem;
   color: #ffd9de;
-  margin-bottom: 18px;
 }
 .hero-sub { max-width: 480px; color: rgba(255,255,255,0.85); margin-bottom: 32px; font-size: 1.02rem; }
 .hero-actions { display: flex; gap: 16px; margin-bottom: 10px; flex-wrap: wrap; }
@@ -353,8 +361,7 @@ ul { list-style: none; }
 .hero-flags {
   display: flex;
   justify-content: flex-start;
-  gap: 14px;
-  margin-top: 26px;
+  gap: 12px;
 }
 .flag-img {
   width: 42px; height: 28px;
