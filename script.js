@@ -121,17 +121,6 @@ document.querySelectorAll('.hero-photo').forEach(photo => {
   }
 });
 
-// ===== COURSE LIST: re-anima al entrar/salir (mobile) =====
-if (isTouchDevice) {
-  const courseCards = document.querySelectorAll('.course-card');
-  const courseObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      entry.target.classList.toggle('visible', entry.isIntersecting);
-    });
-  }, { threshold: 0.2 });
-  courseCards.forEach(card => courseObserver.observe(card));
-}
-
 // ===== TESTIMONIALS: pause marquee on touch =====
 if (isTouchDevice) {
   const testiTrack = document.getElementById('testiTrack');
