@@ -981,6 +981,10 @@ ul { list-style: none; }
   .footer-grid { grid-template-columns: 1fr; }
   .testi-card { width: 260px; padding: 24px 20px; }
   .course-card h3 { font-size: .95rem; }
+  /* en móvil: la lista aparece deslizando desde la izquierda al hacer scroll */
+  .course-card.reveal-up { transform: translateX(-40px); }
+  .course-card.reveal-up.visible { transform: none; }
+  .course-card.reveal-up.visible::before { transform: translateY(-50%) scaleY(1); }
   .form-row { grid-template-columns: 1fr; }
   .hero-photos { gap: 10px; }
   .hero-photo { border-radius: 12px; aspect-ratio: 3/4; }

@@ -130,16 +130,6 @@ if (isTouchDevice) {
   }
 }
 
-// ===== COURSE CARDS COLOR ON SCROLL (mobile) =====
-if (isTouchDevice) {
-  const courseCards = document.querySelectorAll('.course-card');
-  const courseObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      entry.target.classList.toggle('active', entry.isIntersecting);
-    });
-  }, { threshold: 0.6 });
-  courseCards.forEach(card => courseObserver.observe(card));
-}
 
 // ===== GALLERY =====
 (function () {
