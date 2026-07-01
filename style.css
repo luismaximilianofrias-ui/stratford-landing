@@ -473,9 +473,10 @@ ul { list-style: none; }
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 46px;
+  gap: 0;
   position: relative;
 }
+.zz-item + .zz-item { margin-top: -110px; }
 .zz-line {
   position: absolute;
   inset: 0;
@@ -1051,6 +1052,7 @@ ul { list-style: none; }
   .cards-grid { grid-template-columns: 1fr; max-width: 400px; }
   .academic-zigzag { gap: 26px; }
   .zz-item { width: 72%; gap: 8px; }
+  .zz-item + .zz-item { margin-top: 0; }
   .zz-text { font-size: .92rem; }
   .zz-img { aspect-ratio: 16 / 9; border-radius: 12px; }
   .form-row { grid-template-columns: 1fr; }
