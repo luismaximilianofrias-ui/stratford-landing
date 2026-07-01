@@ -259,6 +259,7 @@ ul { list-style: none; }
 }
 .hero-sub { max-width: 480px; color: rgba(255,255,255,0.85); margin-bottom: 32px; font-size: 1.02rem; }
 .hero-actions { display: flex; gap: 16px; margin-bottom: 10px; flex-wrap: wrap; }
+.hero-actions .btn { border-radius: 6px; }
 
 .hero-img { position: relative; }
 .hero-photos {
