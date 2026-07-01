@@ -298,6 +298,11 @@ ul { list-style: none; }
   text-align: center;
 }
 .section-tag.light { color: var(--red); }
+.section-tag--underline {
+  font-size: 1.2rem;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
 .section-title {
   font-family: var(--ff-serif);
   font-size: clamp(2rem, 4vw, 3rem);
