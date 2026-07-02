@@ -2,6 +2,7 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 :root {
+  color-scheme: light only;
   --red: #e8112d;
   --red-dark: #c20d24;
   --navy: #0a0a0a;
