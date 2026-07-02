@@ -650,7 +650,7 @@ ul { list-style: none; }
   font-size: .92rem;
   color: var(--gray);
   line-height: 1.6;
-  text-align: justify;
+  text-align: center;
 }
 
 /* ===== FACILITIES ===== */
@@ -800,7 +800,7 @@ ul { list-style: none; }
   border-radius: 24px;
   padding: 30px 26px;
 }
-.testi-card p { color: var(--navy); font-style: italic; line-height: 1.6; text-align: justify; }
+.testi-card p { color: var(--navy); font-style: italic; line-height: 1.6; text-align: center; }
 @keyframes testiScroll {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
