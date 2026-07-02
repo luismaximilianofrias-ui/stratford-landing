@@ -542,7 +542,6 @@ ul { list-style: none; }
   display: block;
   transition: transform .5s;
 }
-.zz-img-full img { object-fit: contain; }
 .zz-img img[src=""], .zz-img img:not([src]) { display: none; }
 
 /* animación reveal de arriba hacia abajo */
