@@ -749,6 +749,7 @@ ul { list-style: none; }
   background-size: cover;
   background-position: center;
 }
+.testi-bg-left { background-position: center 68%; }
 /* degradado rojo suave que une las 2 imagenes por el medio */
 .testi-overlay {
   position: absolute;
