@@ -95,9 +95,9 @@ ul { list-style: none; }
 }
 .btn-primary:hover { transform: translateY(-3px) scale(1.03); box-shadow: 0 16px 34px -8px rgba(232,17,45,0.6); }
 .btn-outline {
-  background: var(--navy);
-  border: 2px solid var(--navy);
-  color: #fff;
+  background: #fff;
+  border: 2px solid #fff;
+  color: var(--navy);
 }
 .btn-outline:hover { transform: translateY(-3px); }
 .btn-light { background: #fff; color: var(--red); }
