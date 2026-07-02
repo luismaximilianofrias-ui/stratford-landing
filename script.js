@@ -121,18 +121,31 @@ document.querySelectorAll('.hero-photo').forEach(photo => {
   }
 });
 
-// ===== TESTIMONIALS: rotar imagen de fondo en móvil =====
-if (isTouchDevice) {
+// ===== TESTIMONIALS: rotar imagen de fondo cuando se ve una sola (pantalla angosta) =====
+(function () {
   const bgHalves = document.querySelectorAll('#testiBg .testi-bg-half');
-  if (bgHalves.length > 1) {
-    let bgIdx = 0;
-    setInterval(() => {
+  if (bgHalves.length < 2) return;
+  const mqMobile = window.matchMedia('(max-width: 760px)');
+  let bgTimer = null;
+
+  function start() {
+    if (bgTimer) return;
+    let bgIdx = [...bgHalves].findIndex(h => h.classList.contains('active'));
+    if (bgIdx < 0) { bgIdx = 0; bgHalves[0].classList.add('active'); }
+    bgTimer = setInterval(() => {
       bgHalves[bgIdx].classList.remove('active');
       bgIdx = (bgIdx + 1) % bgHalves.length;
       bgHalves[bgIdx].classList.add('active');
     }, 3000);
   }
-}
+  function stop() {
+    if (bgTimer) { clearInterval(bgTimer); bgTimer = null; }
+  }
+  function handle(e) { e.matches ? start() : stop(); }
+
+  handle(mqMobile);
+  mqMobile.addEventListener('change', handle);
+})();
 
 // ===== TESTIMONIALS: pause marquee on touch =====
 if (isTouchDevice) {
