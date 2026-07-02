@@ -629,7 +629,7 @@ ul { list-style: none; }
   gap: 10px;
 }
 .course-card-body h3 {
-  font-size: 1.12rem;
+  font-size: 1.35rem;
   font-weight: 700;
   color: var(--navy);
   line-height: 1.35;
@@ -646,7 +646,7 @@ ul { list-style: none; }
   box-shadow: 0 2px 5px rgba(0,0,0,0.18);
 }
 .course-card-body p {
-  font-size: .84rem;
+  font-size: 1rem;
   color: var(--gray);
   line-height: 1.6;
   text-align: justify;
