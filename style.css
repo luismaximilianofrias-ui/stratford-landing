@@ -1068,6 +1068,12 @@ ul { list-style: none; }
   .zz-text { font-size: .92rem; }
   .zz-img { aspect-ratio: 16 / 9; border-radius: 12px; }
   .form-row { grid-template-columns: 1fr; }
+  /* en móvil: foto vertical del frente */
+  .hero {
+    background-image:
+      linear-gradient(180deg, rgba(30,6,10,0.55) 0%, rgba(30,6,10,0.35) 35%, rgba(30,6,10,0.7) 78%, rgba(30,6,10,0.9) 100%),
+      url('img/hero-frente-vertical.jpeg');
+  }
   .hero-photos { gap: 10px; }
   .hero-photo { border-radius: 12px; aspect-ratio: 3/4; }
   .hero-photo-2 img { object-position: 10% 30%; }
