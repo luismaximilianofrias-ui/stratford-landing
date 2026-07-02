@@ -732,7 +732,7 @@ ul { list-style: none; }
 
 /* ===== TESTIMONIALS ===== */
 .testimonials {
-  padding: 110px 0 90px;
+  padding: 110px 0 180px;
   background: var(--red);
   overflow: hidden;
   position: relative;
@@ -766,7 +766,7 @@ ul { list-style: none; }
 .testimonials .container,
 .testimonials .testi-track-wrap { position: relative; z-index: 2; }
 .testimonials .section-tag, .testimonials .section-title { color: #fff; }
-.testi-track-wrap { overflow: hidden; margin-top: 50px; }
+.testi-track-wrap { overflow: hidden; margin-top: 100px; }
 .testi-track {
   display: flex;
   gap: 26px;
