@@ -530,15 +530,15 @@ ul { list-style: none; }
 }
 .zz-img {
   width: 100%;
-  aspect-ratio: 16 / 10;
+  aspect-ratio: 4 / 5;
   border-radius: 16px;
   overflow: hidden;
-  background: linear-gradient(135deg, #f0f0f0, #e2e2e2);
+  background: #f4f2f2;
   box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 .zz-img img {
   width: 100%; height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   display: block;
   transition: transform .5s;
 }
@@ -1083,7 +1083,7 @@ ul { list-style: none; }
   .zz-item { width: 72%; gap: 8px; }
   .zz-item + .zz-item { margin-top: 0; }
   .zz-text { font-size: .92rem; }
-  .zz-img { aspect-ratio: 16 / 9; border-radius: 12px; }
+  .zz-img { aspect-ratio: 4 / 5; border-radius: 12px; }
   .form-row { grid-template-columns: 1fr; }
   /* en móvil: foto vertical del frente */
   .hero {
