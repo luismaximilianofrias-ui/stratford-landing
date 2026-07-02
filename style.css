@@ -747,9 +747,9 @@ ul { list-style: none; }
 .testi-bg-half {
   flex: 1;
   background-size: cover;
-  background-position: center;
+  background-position: center 66%;
 }
-.testi-bg-left { background-position: center 68%; }
+.testi-bg-left { background-position: center 80%; }
 /* degradado rojo suave que une las 2 imagenes por el medio */
 .testi-overlay {
   position: absolute;
@@ -766,7 +766,7 @@ ul { list-style: none; }
 .testimonials .container,
 .testimonials .testi-track-wrap { position: relative; z-index: 2; }
 .testimonials .section-tag, .testimonials .section-title { color: #fff; }
-.testi-track-wrap { overflow: hidden; margin-top: 100px; }
+.testi-track-wrap { overflow: hidden; margin-top: 150px; }
 .testi-track {
   display: flex;
   gap: 26px;
