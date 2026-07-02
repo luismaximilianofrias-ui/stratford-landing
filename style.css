@@ -258,6 +258,24 @@ ul { list-style: none; }
   color: #ffd9de;
 }
 .hero-sub { max-width: 480px; color: rgba(255,255,255,0.85); margin-bottom: 32px; font-size: 1.02rem; }
+.hero-pills { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 26px; }
+.hero-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 16px;
+  border-radius: 50px;
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.25);
+  color: #fff;
+  font-size: .88rem;
+  font-weight: 600;
+  backdrop-filter: blur(4px);
+}
+.hero-pill svg { flex-shrink: 0; color: #ff6b7d; }
+.hero-pill-link { transition: background .3s, transform .3s; }
+.hero-pill-link:hover { background: rgba(255,255,255,0.22); transform: translateY(-2px); }
+
 .hero-actions { display: flex; gap: 16px; margin-bottom: 10px; flex-wrap: wrap; }
 .hero-actions .btn { border-radius: 6px; }
 
