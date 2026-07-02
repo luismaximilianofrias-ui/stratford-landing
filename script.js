@@ -96,7 +96,7 @@ form.addEventListener('submit', (e) => {
   const curso    = document.getElementById('fcourse').value;
   const mensaje  = document.getElementById('fmessage').value.trim();
   const texto = `Hola! Mi nombre es ${nombre} ${apellido}.\nTeléfono: ${telefono}\nMe interesa: ${curso}${mensaje ? '\n\n' + mensaje : ''}`;
-  const url = `https://wa.me/5493865000000?text=${encodeURIComponent(texto)}`;
+  const url = `https://wa.me/5493863411738?text=${encodeURIComponent(texto)}`;
   formSuccess.classList.add('show');
   setTimeout(() => {
     formSuccess.classList.remove('show');
