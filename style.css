@@ -766,7 +766,7 @@ ul { list-style: none; }
 .testimonials .container,
 .testimonials .testi-track-wrap { position: relative; z-index: 2; }
 .testimonials .section-tag, .testimonials .section-title { color: #fff; }
-.testi-track-wrap { overflow: hidden; margin-top: 210px; }
+.testi-track-wrap { overflow: hidden; margin-top: 280px; }
 .testi-track {
   display: flex;
   gap: 26px;
