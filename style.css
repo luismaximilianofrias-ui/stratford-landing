@@ -1079,6 +1079,7 @@ ul { list-style: none; }
       rgba(232,17,45,0.95) 100%);
   }
   .cards-grid { grid-template-columns: 1fr; max-width: 400px; }
+  .facilities .section-sub { text-align: justify; }
   .academic-zigzag { gap: 26px; }
   .zz-item { width: 72%; gap: 8px; }
   .zz-item + .zz-item { margin-top: 0; }
