@@ -167,7 +167,7 @@ ul { list-style: none; }
   background-color: #2a0a0e;
   background-image:
     linear-gradient(90deg, rgba(30,6,10,0.92) 0%, rgba(40,10,14,0.6) 34%, rgba(40,10,14,0.1) 60%, rgba(40,10,14,0) 100%),
-    url('img/hero-frente.png');
+    url('img/hero-frente.jpg');
   background-size: cover, cover;
   background-position: center, center;
   background-repeat: no-repeat, no-repeat;
