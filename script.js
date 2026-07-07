@@ -4,6 +4,35 @@ window.addEventListener('load', () => {
   setTimeout(() => loader.classList.add('hide'), 400);
 });
 
+// ===== CURSOS: boton "Ver más" en las descripciones largas =====
+function setupVerMas() {
+  document.querySelectorAll('.course-card-body p').forEach(p => {
+    // borrar boton previo si se recalcula
+    if (p.nextElementSibling && p.nextElementSibling.classList.contains('ver-mas-btn')) {
+      p.nextElementSibling.remove();
+    }
+    p.classList.remove('expanded');
+    // ¿el texto se corta? (hay más de 3 líneas)
+    if (p.scrollHeight > p.clientHeight + 2) {
+      const btn = document.createElement('button');
+      btn.className = 'ver-mas-btn';
+      btn.type = 'button';
+      btn.textContent = 'Ver más';
+      p.after(btn);
+      btn.addEventListener('click', () => {
+        const expanded = p.classList.toggle('expanded');
+        btn.textContent = expanded ? 'Ver menos' : 'Ver más';
+      });
+    }
+  });
+}
+window.addEventListener('load', setupVerMas);
+let verMasTimer;
+window.addEventListener('resize', () => {
+  clearTimeout(verMasTimer);
+  verMasTimer = setTimeout(setupVerMas, 200);
+});
+
 // ===== CURSOR GLOW =====
 const glow = document.getElementById('cursorGlow');
 window.addEventListener('pointermove', (e) => {
